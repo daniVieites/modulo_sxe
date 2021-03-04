@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_product,product_default,model_product,,1,0,0,0
+acl_product_seller,product_seller,model_product,group_seller,1,1,1,1
+acl_consumer,consumer_default,model_consumer,,1,0,0,0
+acl_consumer_seller,consumer_seller,model_consumer,group_seller,1,1,1,1
+acl_sale,sale_default,model_sale,,1,0,0,0
+acl_sale_seller,sale_seller,model_sale,group_seller,1,1,1,1

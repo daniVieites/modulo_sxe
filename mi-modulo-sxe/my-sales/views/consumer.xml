@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id='consumers_action' model='ir.actions.act_window'>
+        <field name="name">Consumers</field>
+        <field name="res_model">consumer</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Consumers" id="consumers_menu" parent="sales_base_menu" action="my-sales.consumers_action"/>
+
+    <!-- Form View -->
+    <record id="consumer_form_view" model="ir.ui.view">
+        <field name="name">Consumer Form</field>
+        <field name="model">consumer</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="partner_id"/>
+                    </group>
+                    <group>
+                        <field name="country"/>
+                        <field name="date_of_birth"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="consumer_tree_view" model="ir.ui.view">
+        <field name="name">Consumer Tree</field>
+        <field name="model">consumer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id" />
+                <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
